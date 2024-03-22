@@ -82,3 +82,13 @@ plt.xlabel('time')
 plt.ylabel('stock price')
 plt.legend(loc='best')
 plt.show()
+
+from sklearn.metrics import mean_squared_error, mean_absolute_error
+
+# 예측값과 실제값 간의 평균 제곱 오차(MSE) 계산
+mse = mean_squared_error(test_y, pred_y)
+print("Mean Squared Error (MSE):", mse)
+
+# 예측값과 실제값 간의 평균 절대 오차(MAE) 계산
+mae = mean_absolute_error(test_y, pred_y)
+print("Mean Absolute Error (MAE):", mae)
